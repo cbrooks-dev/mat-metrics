@@ -1,0 +1,75 @@
+{% extends "templates/base.html" %}
+{% block title %}Home | Mat Metrics{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="py-5 text-center bg-white rounded shadow-sm mb-5">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Track. Improve. Connect.</h1>
+        <p class="lead mt-3">
+            Mat Metrics helps BJJ practitioners keep a detailed log of their training, 
+            techniques, competition results, and progress—while connecting with teammates 
+            and the global jiu-jitsu community.
+        </p>
+
+        <a href="#" class="btn btn-primary btn-lg mt-3">
+            Start Your Journey
+        </a>
+    </div>
+</section>
+
+<!-- FEATURE CARDS -->
+<div class="row mb-5">
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body text-center">
+                <h4 class="card-title fw-bold">Training Log</h4>
+                <p class="card-text">
+                    Record sparring rounds, drilling sessions, class notes, and 
+                    physical conditioning—all in one place.
+                </p>
+                <a href="#" class="btn btn-outline-primary">View Logs</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body text-center">
+                <h4 class="card-title fw-bold">Technique Library</h4>
+                <p class="card-text">
+                    Save techniques you’re learning, tag them by position, 
+                    and track what's working in training.
+                </p>
+                <a href="#" class="btn btn-outline-primary">Explore Techniques</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-body text-center">
+                <h4 class="card-title fw-bold">Community</h4>
+                <p class="card-text">
+                    Connect with teammates and practitioners worldwide. 
+                    Share insights, progress, and motivation.
+                </p>
+                <a href="#" class="btn btn-outline-primary">Join Community</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CALL TO ACTION -->
+<section class="py-5 text-center bg-primary text-white rounded shadow-sm">
+    <h2 class="fw-bold">Ready to level up your jiu-jitsu?</h2>
+    <p class="lead mt-2">
+        Build better habits, track improvements, and stay connected.  
+    </p>
+    <a href="{% url 'register' %}" class="btn btn-light btn-lg mt-3">
+        Create Your Free Account
+    </a>
+</section>
+
+{% endblock %}
