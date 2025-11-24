@@ -1,75 +1,165 @@
-{% extends "templates/base.html" %}
-{% block title %}Home | Mat Metrics{% endblock %}
+{% extends "base.html" %}
 
 {% block content %}
 
-<!-- HERO SECTION -->
-<section class="py-5 text-center bg-white rounded shadow-sm mb-5">
-    <div class="container">
-        <h1 class="display-4 fw-bold">Track. Improve. Connect.</h1>
-        <p class="lead mt-3">
-            Mat Metrics helps BJJ practitioners keep a detailed log of their training, 
-            techniques, competition results, and progress—while connecting with teammates 
-            and the global jiu-jitsu community.
+<!-- Hero Section -->
+<section class="position-relative text-white" 
+         style="background-color:#000; background-image: url('https://images.unsplash.com/photo-1600718372751-bfcafae77c27?auto=format&fit=crop&w=1950&q=80'); 
+                background-size: cover; background-position: center; height: 60vh;">
+    <div class="overlay" style="background: rgba(0,0,0,0.7); position: absolute; top:0; left:0; width:100%; height:100%;"></div>
+    <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-center position-relative">
+        <h1 class="display-3 fw-bold mb-3 animate__animated animate__fadeInDown" style="color: #00ffd5;">Elevate Your BJJ Journey</h1>
+        <p class="lead mb-4 fs-5 text-light animate__animated animate__fadeInUp animate__delay-1s">
+            Track progress, log training, and connect with BJJ enthusiasts worldwide.
         </p>
-
-        <a href="#" class="btn btn-primary btn-lg mt-3">
-            Start Your Journey
-        </a>
+        <a href="#" class="btn btn-outline-info btn-lg animate__animated animate__fadeInUp animate__delay-2s" style="border-width: 2px;">Get Started</a>
     </div>
 </section>
 
-<!-- FEATURE CARDS -->
-<div class="row mb-5">
-    <div class="col-md-4 mb-4">
-        <div class="card shadow-sm h-100">
-            <div class="card-body text-center">
-                <h4 class="card-title fw-bold">Training Log</h4>
-                <p class="card-text">
-                    Record sparring rounds, drilling sessions, class notes, and 
-                    physical conditioning—all in one place.
-                </p>
-                <a href="#" class="btn btn-outline-primary">View Logs</a>
+<!-- Features Section -->
+<section class="py-5" style="background-color:#111;">
+    <div class="container">
+        <div class="row g-4 text-center">
+
+            <div class="col-md-4">
+                <div class="card feature-card h-100 border-0 text-white animate__animated animate__fadeInUp" style="background:#1c1c1c; animation-delay:0.1s;">
+                    <div class="card-body p-5">
+                        <i class="bi bi-bar-chart-line-fill display-4 mb-3" style="color:#00ffd5;"></i>
+                        <h5 class="card-title fw-bold">Track Your Progress</h5>
+                        <p class="card-text">Log sessions, belts, and milestones with clean visual charts.</p>
+                    </div>
+                </div>
             </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card h-100 border-0 text-white animate__animated animate__fadeInUp" style="background:#1c1c1c; animation-delay:0.3s;">
+                    <div class="card-body p-5">
+                        <i class="bi bi-people-fill display-4 mb-3" style="color:#00ffd5;"></i>
+                        <h5 class="card-title fw-bold">Connect with Community</h5>
+                        <p class="card-text">Find training partners and join groups globally.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card feature-card h-100 border-0 text-white animate__animated animate__fadeInUp" style="background:#1c1c1c; animation-delay:0.5s;">
+                    <div class="card-body p-5">
+                        <i class="bi bi-lightning-fill display-4 mb-3" style="color:#00ffd5;"></i>
+                        <h5 class="card-title fw-bold">Stay Motivated</h5>
+                        <p class="card-text">Set goals, track milestones, and celebrate achievements.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-
-    <div class="col-md-4 mb-4">
-        <div class="card shadow-sm h-100">
-            <div class="card-body text-center">
-                <h4 class="card-title fw-bold">Technique Library</h4>
-                <p class="card-text">
-                    Save techniques you’re learning, tag them by position, 
-                    and track what's working in training.
-                </p>
-                <a href="#" class="btn btn-outline-primary">Explore Techniques</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4 mb-4">
-        <div class="card shadow-sm h-100">
-            <div class="card-body text-center">
-                <h4 class="card-title fw-bold">Community</h4>
-                <p class="card-text">
-                    Connect with teammates and practitioners worldwide. 
-                    Share insights, progress, and motivation.
-                </p>
-                <a href="#" class="btn btn-outline-primary">Join Community</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- CALL TO ACTION -->
-<section class="py-5 text-center bg-primary text-white rounded shadow-sm">
-    <h2 class="fw-bold">Ready to level up your jiu-jitsu?</h2>
-    <p class="lead mt-2">
-        Build better habits, track improvements, and stay connected.  
-    </p>
-    <a href="{% url 'register' %}" class="btn btn-light btn-lg mt-3">
-        Create Your Free Account
-    </a>
 </section>
+
+<!-- Stats Section -->
+<section class="py-5 text-center" style="background:#000; color:#00ffd5;">
+    <div class="container">
+        <h2 class="fw-bold mb-4 animate__animated animate__fadeInDown" style="color: white">MatMetrics by Numbers</h2>
+        <div class="row g-4">
+
+            <div class="col-md-3 animate__animated animate__fadeInUp animate__delay-1s">
+                <h3 class="display-5 fw-bold">2k+</h3>
+                <p>Users Tracking Progress</p>
+            </div>
+
+            <div class="col-md-3 animate__animated animate__fadeInUp animate__delay-1.2s">
+                <h3 class="display-5 fw-bold">500+</h3>
+                <p>Active BJJ Gyms</p>
+            </div>
+
+            <div class="col-md-3 animate__animated animate__fadeInUp animate__delay-1.4s">
+                <h3 class="display-5 fw-bold">10k+</h3>
+                <p>Training Sessions Logged</p>
+            </div>
+
+            <div class="col-md-3 animate__animated animate__fadeInUp animate__delay-1.6s">
+                <h3 class="display-5 fw-bold">1k+</h3>
+                <p>Community Connections</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-5" style="background:#111; color:#fff;">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5" style="color:#00ffd5;">What Our Users Say</h2>
+        <div class="row g-4">
+
+            <div class="col-md-4 animate__animated animate__fadeInLeft">
+                <div class="card p-4 h-100 border-0" style="background:#1c1c1c; color: white">
+                    <p>"MatMetrics changed how I track my progress. I love seeing improvements!"</p>
+                    <h6 class="fw-bold mb-0 text-info">- Lucas, Blue Belt</h6>
+                </div>
+            </div>
+
+            <div class="col-md-4 animate__animated animate__fadeInUp">
+                <div class="card p-4 h-100 border-0" style="background:#1c1c1c; color: white;">
+                    <p>"I found great training partners nearby thanks to the community feature!"</p>
+                    <h6 class="fw-bold mb-0 text-info">- Ana, Purple Belt</h6>
+                </div>
+            </div>
+
+            <div class="col-md-4 animate__animated animate__fadeInRight">
+                <div class="card p-4 h-100 border-0" style="background:#1c1c1c; color: white">
+                    <p>"The visual progress charts keep me motivated and set realistic goals."</p>
+                    <h6 class="fw-bold mb-0 text-info">- Marco, Brown Belt</h6>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="py-5 text-center" style="background:#000; color:#00ffd5;">
+    <div class="container animate__animated animate__fadeInUp">
+        <h2 class="fw-bold mb-3" style="color: white">Stay Updated</h2>
+        <p class="mb-4">Subscribe to get tips, news, and updates from MatMetrics straight to your inbox.</p>
+        <form class="row g-2 justify-content-center">
+            <div class="col-md-5">
+                <input type="email" class="form-control form-control-lg" placeholder="Your email" style="background:white; color:black; border:1px solid #00ffd5;">
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-outline-info btn-lg w-100">Subscribe</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section class="py-5 text-center" style="background:#111;">
+    <div class="container animate__animated animate__fadeInUp">
+        <h2 class="fw-bold mb-3" style="color:#00ffd5;">Ready to Roll?</h2>
+        <p class="mb-4 fs-5 text-light">Join MatMetrics today and take your BJJ journey to the next level.</p>
+        <a href="#" class="btn btn-outline-info btn-lg">Join Now</a>
+    </div>
+</section>
+
+<!-- Extra Styles -->
+<style>
+.feature-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 12px;
+}
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0,255,213,0.25);
+}
+.btn-outline-info {
+    border-width: 2px;
+}
+.overlay {
+    pointer-events: none;
+}
+</style>
+
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 {% endblock %}
